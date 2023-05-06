@@ -96,7 +96,6 @@
 
 	const getLastChild = () => {
 		const editableContent = document.getElementById('editableContent');
-		console.log(editableContent?.firstChild, editableContent?.lastChild);
 		if ((editableContent?.lastChild as any)?.length === 1) {
 			return editableContent?.firstChild;
 		}
@@ -106,10 +105,7 @@
 	const getEndCoordinates = () => {
 		let x = 0;
 		let y = 0;
-
 		const lastChild = getLastChild();
-		console.log({ lastChild });
-
 		if (lastChild) {
 			const range = document.createRange();
 			range.selectNodeContents(lastChild);

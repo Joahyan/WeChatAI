@@ -101,7 +101,7 @@
 			const editableContent = document.getElementById('editableContent');
 
 			editableContent?.addEventListener('keydown', (event: KeyboardEvent) => {
-				// console.log('auto block menu keydown event:', event);
+				console.log('auto block menu keydown event:', event);
 				if (!open.value) return;
 
 				if (['ArrowUp', 'ArrowDown'].includes(event.key)) {
@@ -121,7 +121,6 @@
 								? active.value + 1
 								: 0;
 					}
-					console.log(active.value);
 				} else if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
 					// Left/right will exit menu
 					if (searchTerm.value.length === 0) open.value = false;
